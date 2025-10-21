@@ -3,41 +3,25 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint"
   },
   "dependencies": {
-    "@headlessui/react": "^2.2.0",
-    "@prisma/client": "^5.21.1",
-    "animate.css": "^4.1.1",
-    "axios": "^1.7.7",
-    "bcrypt": "^5.1.1",
-    "formik": "^2.4.6",
-    "js-cookie": "^3.0.5",
-    "mercadopago": "^2.0.15",
-    "next": "^15.0.1",
-    "next-auth": "^4.24.10",
-    "primeicons": "^7.0.0",
-    "primereact": "^10.8.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "sweetalert2": "^11.14.4",
-    "uuid": "^11.0.3",
-    "vercel": "^32.3.0",
-    "zod": "^3.23.8"
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "next": "15.5.4"
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
-    "@types/bcrypt": "^5.0.2",
-    "@types/node": "^22.10.1",
-    "@types/react": "^18.3.12",
-    "eslint": "^8",
-    "eslint-config-next": "^14.2.16",
-    "postcss": "^8",
-    "prisma": "^5.21.1",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.7.2"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.4",
+    "@eslint/eslintrc": "^3"
   }
 }

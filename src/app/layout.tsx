@@ -1,38 +1,28 @@
-import { auth} from '@/libs/auth'
+import type { Metadata } from 'next'
 import { Nunito } from 'next/font/google'
-import { WEB_NAME } from '@/config/config'
-import Navbar from '@/components/layout/Navbar'
-import '@/styles/globals.css'
-import 'primeicons/primeicons.css';
-import 'primereact/resources/themes/lara-light-blue/theme.css'
-import 'animate.css'
-import { ReactNode } from 'react'
-
-export const metadata = {
-  title: WEB_NAME,
-  description: `¡Bienvenido a ${WEB_NAME}!`,
-}
+import 'styles/global.css'
 
 const nunito = Nunito({
-  style: ["normal", "italic"],
-  subsets: ["latin"]
+	style: 'normal',
+	subsets: ["latin"],
 })
 
-interface Props {
-  children: ReactNode
-}
+export const metadata: Metadata = {
+	title: "Maptrip",
+};
 
-export default async function RootLayout({ children }: Props) {
-  const session = await auth()
-
-  return (
-    <html lang="es">
-      <body className={`${nunito.className}`}>
-        <Navbar session={session} />
-        <main className="flex flex-col items-center overflow-x-hidden pt-16">
-          {children}
-        </main>
-      </body>
-    </html>
-  )
+export default function RootLayout({
+	children,
+}: Readonly<{
+	children: React.ReactNode;
+}>) {
+	return (
+		<html lang="es">
+			<body className={`${nunito.className}`}>
+				<div id="root">
+					{children}
+				</div>
+			</body>
+		</html>
+	)
 }
